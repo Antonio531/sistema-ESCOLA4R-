@@ -92,9 +92,9 @@ export default function EditarAlumnoModal({ alumno, isOpen, onClose }: EditarAlu
 
   return (
     <Portal>
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
         <div className="absolute inset-0 bg-black/50" onClick={onClose} />
-        <div className="relative bg-white rounded-xl shadow-xl w-full max-w-2xl mx-4 max-h-[90vh] overflow-y-auto">
+        <div className="relative bg-white rounded-xl shadow-xl w-full max-w-lg max-h-[85vh] overflow-y-auto">
         {/* Header */}
         <div className="p-4 border-b border-gray-200 flex items-center justify-between sticky top-0 bg-white">
           <div>
@@ -109,9 +109,9 @@ export default function EditarAlumnoModal({ alumno, isOpen, onClose }: EditarAlu
         {/* Form */}
         <form onSubmit={handleSubmit} className="p-4 space-y-4">
           {/* Información personal */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Nombre */}
-            <div className="md:col-span-2">
+            <div className="sm:col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">Nombre completo *</label>
               <div className="relative">
                 <User className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -173,7 +173,7 @@ export default function EditarAlumnoModal({ alumno, isOpen, onClose }: EditarAlu
           </div>
 
           {/* Información de contacto */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Correo */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Correo electrónico</label>
@@ -205,7 +205,7 @@ export default function EditarAlumnoModal({ alumno, isOpen, onClose }: EditarAlu
             </div>
 
             {/* Dirección */}
-            <div className="md:col-span-2">
+            <div className="sm:col-span-2">
               <label className="block text-sm font-medium text-gray-700 mb-1">Dirección</label>
               <div className="relative">
                 <MapPin className="absolute left-3 top-3 w-4 h-4 text-gray-400" />

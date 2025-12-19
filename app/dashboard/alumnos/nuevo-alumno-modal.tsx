@@ -132,9 +132,9 @@ export default function NuevoAlumnoModal() {
 
       {isOpen && (
         <Portal>
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center">
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
             <div className="absolute inset-0 bg-black/50" onClick={() => setIsOpen(false)} />
-            <div className="relative bg-white rounded-xl shadow-xl w-full max-w-2xl mx-4 max-h-[90vh] flex flex-col">
+            <div className="relative bg-white rounded-xl shadow-xl w-full max-w-lg max-h-[85vh] flex flex-col">
               {/* Header */}
             <div className="p-4 border-b border-gray-200 flex items-center justify-between">
               <div>
@@ -165,7 +165,7 @@ export default function NuevoAlumnoModal() {
               </div>
 
               {/* Matrícula y CURP */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Matrícula</label>
                   <div className="relative">
@@ -193,7 +193,7 @@ export default function NuevoAlumnoModal() {
               </div>
 
               {/* Fecha nacimiento y Grado */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Fecha de nacimiento</label>
                   <div className="relative">
@@ -225,7 +225,7 @@ export default function NuevoAlumnoModal() {
               </div>
 
               {/* Correo y Teléfono */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Correo</label>
                   <div className="relative">
